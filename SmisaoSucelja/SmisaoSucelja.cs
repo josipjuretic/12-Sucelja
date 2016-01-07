@@ -41,6 +41,19 @@ namespace Vsite.CSharp
             Console.WriteLine("GOTOVO!!!");
             Console.ReadKey();
 
+            Console.WriteLine("Sortiramo po prezimenu:");
+            popisOsoba.Sort((Osoba a, Osoba b) =>
+            {
+                int rezuktat = a.prezime.CompareTo(b.prezime);
+                if (rezultat != 0)
+                    return rezultat;
+
+            }
+   );
+            Ispiši(popisOsoba);
+
+            Console.WriteLine();
+
         }
 
         static void Ispiši(List<Osoba> list)

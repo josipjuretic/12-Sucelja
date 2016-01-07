@@ -14,10 +14,12 @@
     }
 
 
-    // TODO: u klasi Izvedena pregazite (override) metode iz ISučelja. Provjerite poruke o pogreškama ili upozorenja prevoditelja
+    // u klasi Izvedena pregazite (override) metode iz ISučelja. Provjerite poruke o pogreškama ili upozorenja prevoditelja
     class Izvedena : Bazna
     {
+        public new void Metoda() { }
 
+        public virtual void VirtualnaMetoda() { }
     }
 
     class Program

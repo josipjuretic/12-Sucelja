@@ -19,18 +19,34 @@ namespace Vsite.CSharp
     delegate void MojDelegat(object sender, EventArgs e);
 
 
-    // TODO: Napišite kod klase Implementacija tako da implementira sučelje IMojeSučelje. 
-    // TODO: Implementirajte kod za Svojstvo i indekser tako da vraćaju neki tekst
-    class Implementacija
+    // Napišite kod klase Implementacija tako da implementira sučelje IMojeSučelje. 
+    // Implementirajte kod za Svojstvo i indekser tako da vraćaju neki tekst
+    class Implementacija : IMojeSučelje
     {
+        public void MojaMetoda(int argument)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string Svojstvo
+        {
+            get { return "svojstvo"; }
+        }
+
+        public string this[int indeks]
+        {
+            get { return "indekser"; }
+        }
+
+        public event MojDelegat MojDogađaj;
     }
 
     class Program
     {
         static void Main(string[] args)
         {
-            // TODO: Inicijalizirajte objekt ms instancom objekta Implementacija i provjerite što će se ispisati izvođenjem koda
-            IMojeSučelje ms = null;
+            // Inicijalizirajte objekt ms instancom objekta Implementacija i provjerite što će se ispisati izvođenjem koda
+            IMojeSučelje ms = new Implementacija();
 
             IspišiSvojstvo(ms);
             IspišiIndekser(ms);
